@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Red Ress Billing</title>
+<meta name="description" content="Offline billing and sales register for Red Ress Pharma">
+<meta name="theme-color" content="#2340a8">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="48x48" href="icons/favicon-48.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="RR Billing">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<header class="bar"><div class="wrap">
+  <button class="brand" data-act="go" data-to="#/" aria-label="Go to dashboard"><span class="seal" id="seal">RRP</span><span><b id="brandName">RED RESS PHARMA</b><small>Billing &amp; sales register</small></span></button>
+  <nav id="nav">
+    <button class="tab" data-act="go" data-to="#/" data-v="dash">Parties</button>
+    <button class="tab" data-act="go" data-to="#/register" data-v="register">Sales register</button>
+    <button class="tab" data-act="go" data-to="#/settings" data-v="settings">Settings &amp; data</button>
+  </nav>
+  <button class="btn" id="installBtn" data-act="install" hidden>Install app</button>
+  <button class="btn primary" data-act="newbill">+ New bill</button>
+</div></header>
+<main class="wrap" id="app"><div class="empty">Opening your records…</div></main>
+<div class="toast" id="toast" hidden></div>
+<div class="busy" id="busy" hidden><span id="busyText">Saving…</span></div>
+<noscript><p style="padding:20px">Turn on JavaScript to use Red Ress Billing.</p></noscript>
+<script src="vendor/pdf-lib.min.js"></script>
+<script src="vendor/jszip.min.js"></script>
+<script src="js/store.js"></script>
+<script src="js/pdf.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
